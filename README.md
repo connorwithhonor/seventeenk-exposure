@@ -1,2 +1,0 @@
-# seventeenk-exposure
-SeventeenK Exposure

@@ -1,1 +1,1803 @@
-{"id":"/index.html","path":"/index.html","sha":"bf22fbd826bc2c9251ba5c2b2fc2a1e6457756c3","mime_type":"text/html","size":58213,"site_id":"815a3adf-00b5-4f34-9863-6630d512d0eb","deploy_id":"69ba098567e4d86e33284554"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SeventeenK | The Exclusive Listings Question — Answered</title>
+<meta name="description" content="Compass private exclusives, coming soon listings, delayed marketing — everyone's panicking. Here's what actually matters for sellers in Santa Clarita. $17,000 flat fee. Maximum exposure.">
+<meta property="og:title" content="SeventeenK | Exclusive Listings vs. Maximum Exposure">
+<meta property="og:description" content="Big brokerages charge more and show your home to fewer people. We charge $17,000 and put it everywhere.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seventeenk.com/exposure">
+<link rel="icon" type="image/png" href="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/6987775d0a7fd1313ef1d23a.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   RESET & VARIABLES
+   ═══════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --gold: #c8a02a;
+  --gold-light: #e4c654;
+  --gold-bright: #f0d060;
+  --gold-dim: rgba(200, 160, 42, 0.12);
+  --gold-glow: rgba(200, 160, 42, 0.3);
+  --gold-subtle: rgba(200, 160, 42, 0.05);
+  --bg-deep: #080808;
+  --bg-card: #0f0f0f;
+  --bg-card-hover: #141414;
+  --bg-elevated: #1a1a1a;
+  --bg-surface: #111111;
+  --text-primary: #f0ece4;
+  --text-secondary: #9a9590;
+  --text-dim: #5a5650;
+  --text-ghost: #3a3530;
+  --red-alert: #c0392b;
+  --red-glow: rgba(192, 57, 43, 0.15);
+  --green-win: #27ae60;
+  --green-glow: rgba(39, 174, 96, 0.15);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ═══════════════════════════════════════════
+   GLOBAL UTILITIES
+   ═══════════════════════════════════════════ */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+.gold { color: var(--gold); }
+.dim { color: var(--text-secondary); }
+
+/* ═══════════════════════════════════════════
+   AMBIENT GOLD DOTS (17 easter egg)
+   ═══════════════════════════════════════════ */
+.ambient-dots {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0;
+  animation: dotPulse 6s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 0.15; transform: scale(1.2); }
+}
+
+/* ═══════════════════════════════════════════
+   SCROLL ANIMATION SYSTEM
+   ═══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.19s; }
+.stagger-4 { transition-delay: 0.26s; }
+.stagger-5 { transition-delay: 0.33s; }
+.stagger-6 { transition-delay: 0.40s; }
+.stagger-7 { transition-delay: 0.47s; }
+.stagger-8 { transition-delay: 0.54s; }
+
+/* ═══════════════════════════════════════════
+   SECTION LABEL + DIVIDER
+   ═══════════════════════════════════════════ */
+.section-label {
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.section-label::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1.5px;
+  background: var(--gold);
+  margin: 14px auto 0;
+  opacity: 0.4;
+}
+
+/* ═══════════════════════════════════════════
+   FLOATING NAV BAR
+   ═══════════════════════════════════════════ */
+.floating-nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-80px);
+  z-index: 1000;
+  background: rgba(15, 15, 15, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(200, 160, 42, 0.12);
+  border-radius: 50px;
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.5s ease;
+  opacity: 0;
+}
+
+.floating-nav.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.floating-nav a {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.floating-nav a:hover { color: var(--gold); }
+
+.floating-nav .nav-cta {
+  background: var(--gold);
+  color: var(--bg-deep);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+}
+
+.floating-nav .nav-cta:hover {
+  background: var(--gold-light);
+  transform: scale(1.04);
+}
+
+/* ═══════════════════════════════════════════
+   HERO / PANIC SECTION
+   ═══════════════════════════════════════════ */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 120px 0 100px;
+  overflow: hidden;
+}
+
+.hero-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200,160,42,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,160,42,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+.hero-glow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,160,42,0.06) 0%, transparent 70%);
+  pointer-events: none;
+  animation: heroGlowPulse 8s ease-in-out infinite;
+}
+
+@keyframes heroGlowPulse {
+  0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.15); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: typeIn 0.8s ease 0.3s forwards;
+}
+
+@keyframes typeIn {
+  from { opacity: 0; letter-spacing: 12px; }
+  to { opacity: 1; letter-spacing: 6px; }
+}
+
+.hero-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.08;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: headlineReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+@keyframes headlineReveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-headline .line {
+  display: block;
+}
+
+.hero-headline .line-gold {
+  display: block;
+  color: var(--gold);
+  position: relative;
+}
+
+.hero-headline .line-gold::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  animation: lineExpand 0.8s ease 1.4s forwards;
+}
+
+@keyframes lineExpand {
+  to { width: 120px; }
+}
+
+.hero-sub {
+  font-size: 17px;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto 56px;
+  line-height: 1.9;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1s forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* News ticker chips */
+.news-ticker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.news-chip {
+  background: var(--bg-card);
+  border: 1px solid rgba(200, 160, 42, 0.08);
+  border-radius: 10px;
+  padding: 14px 22px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  animation: chipIn 0.6s ease forwards;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.news-chip:nth-child(1) { animation-delay: 1.2s; }
+.news-chip:nth-child(2) { animation-delay: 1.35s; }
+.news-chip:nth-child(3) { animation-delay: 1.5s; }
+.news-chip:nth-child(4) { animation-delay: 1.65s; }
+
+@keyframes chipIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.news-chip:hover {
+  border-color: var(--gold);
+  background: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(200,160,42,0.08);
+}
+
+.news-chip .chip-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  animation: chipPulse 2s ease-in-out infinite;
+}
+
+@keyframes chipPulse {
+  0%, 100% { opacity: 0.4; box-shadow: 0 0 0 0 rgba(200,160,42,0.4); }
+  50% { opacity: 1; box-shadow: 0 0 0 6px rgba(200,160,42,0); }
+}
+
+/* Hero quote */
+.hero-quote {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 44px;
+  background: var(--bg-card);
+  border-radius: 20px;
+  border: 1px solid rgba(200, 160, 42, 0.08);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1.8s forwards;
+}
+
+.hero-quote::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.3;
+}
+
+.hero-quote::after {
+  content: '"';
+  font-family: 'Playfair Display', serif;
+  font-size: 160px;
+  color: var(--gold);
+  opacity: 0.06;
+  position: absolute;
+  top: -20px;
+  left: 24px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.hero-quote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-quote .attribution {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════
+   SECTION 2: STRIP IT DOWN
+   ═══════════════════════════════════════════ */
+.truth-section {
+  padding: 120px 0;
+  position: relative;
+}
+
+.truth-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,160,42,0.15), transparent);
+}
+
+.truth-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4.5vw, 50px);
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.truth-sub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto 72px;
+  font-weight: 300;
+  line-height: 1.85;
+}
+
+.strip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-bottom: 72px;
+}
+
+.strip-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 40px 32px;
+  border: 1px solid rgba(200,160,42,0.04);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.strip-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--gold);
+  transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 0 0 3px 0;
+}
+
+.strip-card:hover {
+  border-color: rgba(200,160,42,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 40px rgba(200,160,42,0.04);
+}
+
+.strip-card:hover::before {
+  height: 100%;
+}
+
+.strip-card .card-num {
+  font-size: 64px;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.06;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  line-height: 1;
+  font-family: 'Playfair Display', serif;
+  transition: opacity 0.4s ease;
+}
+
+.strip-card:hover .card-num { opacity: 0.12; }
+
+.strip-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  line-height: 1.35;
+  position: relative;
+}
+
+.strip-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+/* Punchline box */
+.truth-punchline {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 44px;
+  border: 1px solid rgba(200,160,42,0.3);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(200,160,42,0.06) 0%, rgba(200,160,42,0.02) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.truth-punchline::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--gold), transparent, var(--gold));
+  opacity: 0.08;
+  z-index: 0;
+}
+
+.truth-punchline p {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════
+   SECTION 3: HEAD-TO-HEAD COMPARISON
+   ═══════════════════════════════════════════ */
+.compare-section {
+  padding: 120px 0;
+  background: var(--bg-surface);
+  position: relative;
+}
+
+.compare-section::before,
+.compare-section::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,160,42,0.12), transparent);
+}
+.compare-section::before { top: 0; }
+.compare-section::after { bottom: 0; }
+
+.compare-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.compare-sub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto 72px;
+  font-weight: 300;
+  line-height: 1.85;
+}
+
+/* Animated counter */
+.compare-home-price {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.price-context {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.animated-price {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 800;
+  color: var(--gold);
+  display: inline-block;
+}
+
+.animated-price .dollar { opacity: 0.5; }
+
+/* Versus columns */
+.versus-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 0;
+  align-items: stretch;
+  max-width: 960px;
+  margin: 0 auto 72px;
+}
+
+.versus-col {
+  padding: 44px 36px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.versus-col::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 20px 20px 0 0;
+}
+
+.versus-col.them {
+  background: var(--red-glow);
+  border: 1px solid rgba(192, 57, 43, 0.15);
+}
+
+.versus-col.them::before {
+  background: linear-gradient(90deg, transparent, var(--red-alert), transparent);
+  opacity: 0.6;
+}
+
+.versus-col.us {
+  background: var(--green-glow);
+  border: 1px solid rgba(39, 174, 96, 0.15);
+}
+
+.versus-col.us::before {
+  background: linear-gradient(90deg, transparent, var(--green-win), transparent);
+  opacity: 0.6;
+}
+
+.versus-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vs-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-deep);
+  border: 2px solid var(--text-ghost);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+}
+
+.versus-col .v-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.versus-col.them .v-label { color: var(--red-alert); }
+.versus-col.us .v-label { color: var(--green-win); }
+
+.versus-col h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  line-height: 1.25;
+}
+
+.v-list { list-style: none; }
+
+.v-list li {
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.v-list li:last-child { border-bottom: none; }
+
+.v-list .v-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: 1px;
+}
+
+.them .v-icon {
+  background: rgba(192,57,43,0.15);
+  color: var(--red-alert);
+}
+
+.us .v-icon {
+  background: rgba(39,174,96,0.15);
+  color: var(--green-win);
+}
+
+/* Price tags */
+.v-price-block {
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: 14px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.them .v-price-block {
+  background: rgba(192,57,43,0.06);
+  border: 1px solid rgba(192,57,43,0.12);
+}
+
+.us .v-price-block {
+  background: rgba(39,174,96,0.06);
+  border: 1px solid rgba(39,174,96,0.12);
+}
+
+.v-price-block .price-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.v-price-block .price-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.them .price-amount { color: var(--red-alert); }
+.us .price-amount { color: var(--green-win); }
+
+.v-price-block .price-note {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+/* Savings callout */
+.savings-callout {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 36px;
+  border-radius: 16px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(200,160,42,0.2);
+}
+
+.savings-callout .savings-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.savings-callout .savings-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.savings-callout .savings-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  font-weight: 300;
+}
+
+/* ═══════════════════════════════════════════
+   SECTION 4: MARKETING STACK
+   ═══════════════════════════════════════════ */
+.stack-section {
+  padding: 120px 0;
+}
+
+.stack-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.stack-sub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 72px;
+  font-weight: 300;
+  line-height: 1.85;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 72px;
+}
+
+.stack-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 36px 30px;
+  border: 1px solid rgba(200,160,42,0.04);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stack-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 0;
+  background: linear-gradient(to top, rgba(200,160,42,0.04), transparent);
+  transition: height 0.5s ease;
+}
+
+.stack-card:hover {
+  border-color: rgba(200,160,42,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.stack-card:hover::after { height: 100%; }
+
+.stack-card .stack-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: var(--gold-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.stack-card:hover .stack-icon {
+  background: rgba(200,160,42,0.2);
+  transform: scale(1.08);
+}
+
+.stack-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+  position: relative;
+  z-index: 1;
+}
+
+.stack-card p {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+}
+
+/* Stack closer */
+.stack-closer {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.stack-closer p {
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+.stack-closer strong { color: var(--gold); font-weight: 600; }
+
+/* ═══════════════════════════════════════════
+   SECTION 5: THE POSITION (CTA)
+   ═══════════════════════════════════════════ */
+.position-section {
+  padding: 120px 0;
+  background: var(--bg-surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.position-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,160,42,0.15), transparent);
+}
+
+.position-glow {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(200,160,42,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.position-block {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.position-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4.5vw, 52px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 28px;
+}
+
+.position-body {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 56px;
+}
+
+.pillars-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.pillar {
+  padding: 36px 24px;
+  background: var(--bg-deep);
+  border-radius: 16px;
+  border: 1px solid rgba(200,160,42,0.06);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pillar:hover {
+  border-color: rgba(200,160,42,0.15);
+  transform: translateY(-4px);
+}
+
+.pillar .pillar-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.pillar h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.2px;
+}
+
+.pillar p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* CTA Button */
+.cta-btn {
+  display: inline-block;
+  padding: 20px 56px;
+  background: var(--gold);
+  color: var(--bg-deep);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.cta-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(200,160,42,0.3);
+}
+
+.cta-btn:hover::before { opacity: 1; }
+
+.cta-secondary {
+  display: block;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.cta-secondary:hover { color: var(--gold); }
+
+/* ═══════════════════════════════════════════
+   SECTION 6: FAQ
+   ═══════════════════════════════════════════ */
+.faq-section {
+  padding: 120px 0;
+  position: relative;
+}
+
+.faq-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,160,42,0.12), transparent);
+}
+
+.faq-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.faq-sub {
+  font-size: 15px;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 60px;
+  font-weight: 300;
+}
+
+.faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  overflow: hidden;
+}
+
+.faq-item:last-child { border-bottom: none; }
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 26px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover { color: var(--gold); }
+
+.faq-toggle {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-ghost);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--gold);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
+  border-color: var(--gold);
+  background: var(--gold-dim);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              padding 0.4s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding-bottom: 26px;
+}
+
+.faq-answer p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
+.site-footer {
+  padding: 48px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+.site-footer p {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+
+.site-footer a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover { color: var(--gold-light); }
+
+/* ═══════════════════════════════════════════
+   PARALLAX FLOATING ELEMENTS
+   ═══════════════════════════════════════════ */
+.float-element {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.04;
+}
+
+.float-ring {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+}
+
+.float-line {
+  width: 200px;
+  height: 1px;
+  background: var(--gold);
+  transform: rotate(-30deg);
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .versus-wrapper {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .versus-center { padding: 8px 0; }
+  .vs-badge {
+    width: 40px; height: 40px;
+  }
+  .pillars-row {
+    grid-template-columns: 1fr;
+  }
+  .floating-nav {
+    display: none;
+  }
+  .news-ticker {
+    flex-direction: column;
+    align-items: center;
+  }
+  .strip-grid {
+    grid-template-columns: 1fr;
+  }
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 32px;
+  }
+  .versus-col {
+    padding: 32px 24px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ── AMBIENT GOLD DOTS ── -->
+<div class="ambient-dots" id="ambientDots"></div>
+
+<!-- ── FLOATING NAV ── -->
+<nav class="floating-nav" id="floatingNav">
+  <a href="#truth">The Truth</a>
+  <a href="#compare">Compare</a>
+  <a href="#stack">Marketing</a>
+  <a href="#faq">FAQ</a>
+  <a href="#position" class="nav-cta">Get Started</a>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     SECTION 1: HERO
+     ══════════════════════════════════════════ -->
+<section class="hero-section" id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+
+  <!-- Parallax floaters -->
+  <div class="float-element float-ring" style="top:10%; left:-5%;"></div>
+  <div class="float-element float-line" style="top:70%; right:5%;"></div>
+
+  <div class="container hero-content">
+    <p class="hero-eyebrow">The Question Every Seller Is Asking</p>
+
+    <h1 class="hero-headline">
+      <span class="line">Exclusive Listings.</span>
+      <span class="line">Coming Soon Listings.</span>
+      <span class="line-gold">Should You Panic?</span>
+    </h1>
+
+    <p class="hero-sub">
+      Compass private exclusives. Delayed marketing. Office exclusives. Every week another headline about listings disappearing behind walled gardens. Sellers are nervous. Buyers are confused. Here is what is actually happening — and why none of it changes the fundamentals.
+    </p>
+
+    <div class="news-ticker">
+      <div class="news-chip"><span class="chip-pulse"></span> Compass private exclusives now syndicated to Redfin</div>
+      <div class="news-chip"><span class="chip-pulse"></span> NAR delayed marketing exemption active</div>
+      <div class="news-chip"><span class="chip-pulse"></span> Zillow vs. Compass lawsuit ongoing</div>
+      <div class="news-chip"><span class="chip-pulse"></span> 500K+ listings potentially off-MLS</div>
+    </div>
+
+    <div class="hero-quote">
+      <p>The question was never which portal your home appears on. The question was always who is marketing it — and whose side they are on when it matters.</p>
+      <div class="attribution">Connor MacIvor · The Seller's Agent · 27+ Years SCV</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 2: STRIP IT DOWN
+     ══════════════════════════════════════════ -->
+<section class="truth-section" id="truth">
+  <div class="container">
+    <p class="section-label reveal">Strip It Down</p>
+    <h2 class="truth-headline reveal stagger-1">What They Are <span class="gold">Really</span> Selling You</h2>
+    <p class="truth-sub reveal stagger-2">
+      Private exclusives. Coming soon. Delayed marketing. These are not features of better representation. They are marketing strategies dressed up as advantages. Here is what happens when you look past the language.
+    </p>
+
+    <div class="strip-grid">
+      <div class="strip-card reveal stagger-1">
+        <span class="card-num">01</span>
+        <h3>Private Exclusives Limit Your Buyer Pool</h3>
+        <p>When a brokerage keeps your listing inside its own network, it is not protecting you. It is protecting its commission split. Fewer eyes on your property means less competition, which means less leverage for you at the negotiating table. The brokerage benefits from keeping both sides of the deal in-house. You pay for that convenience with dollars off your final sale price.</p>
+      </div>
+
+      <div class="strip-card reveal stagger-2">
+        <span class="card-num">02</span>
+        <h3>Coming Soon Is a Clock Running Against You</h3>
+        <p>Delayed marketing sounds strategic until you realize what it actually does: it creates a window where select agents preview your property before the broader market sees it. If their buyer makes an offer during that window, you never know what the open market would have paid. That is not strategy. That is information asymmetry working against the seller.</p>
+      </div>
+
+      <div class="strip-card reveal stagger-3">
+        <span class="card-num">03</span>
+        <h3>No Days on Market Is Not a Benefit</h3>
+        <p>Brokerages pitch the idea that hiding your home's public history protects its value. But if the pricing is right and the marketing is strong, days on market are irrelevant. The real reason they hide that data is so you cannot see how long the private strategy failed before they went public. The absence of data is not the same as a clean record.</p>
+      </div>
+
+      <div class="strip-card reveal stagger-4">
+        <span class="card-num">04</span>
+        <h3>The Brokerage Wins Either Way</h3>
+        <p>When a brokerage handles both the listing side and the buyer side of the same transaction, it collects the full commission. Private exclusives are designed to increase the odds of that happening. This is not conspiracy — it is business structure. The question is whether that structure serves you or serves the brokerage.</p>
+      </div>
+
+      <div class="strip-card reveal stagger-5">
+        <span class="card-num">05</span>
+        <h3>Your Agent's Marketing Is What Matters</h3>
+        <p>Every listing eventually needs buyers. The question is how those buyers find your property. The portal it first appears on matters far less than whether your agent has a real marketing strategy — property-specific websites, AI-powered lead capture, social distribution, local authority, and the tools to get your home in front of the right people at the right time.</p>
+      </div>
+
+      <div class="strip-card reveal stagger-6">
+        <span class="card-num">06</span>
+        <h3>Local Expertise Outperforms Network Size</h3>
+        <p>Compass has 37,000 agents nationally. That sounds impressive until you realize the buyer for your home in Santa Clarita is not coming from a Compass agent in Miami. They are coming from within a 30-mile radius, searching online, driving neighborhoods, and responding to marketing that speaks directly to this market. National reach does not sell local homes.</p>
+      </div>
+    </div>
+
+    <div class="truth-punchline reveal-scale">
+      <p>Exclusive listings are not about giving sellers more options.<br>They are about giving brokerages more control.<br><strong class="gold">The seller who understands that hires differently.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 3: HEAD-TO-HEAD
+     ══════════════════════════════════════════ -->
+<section class="compare-section" id="compare">
+  <div class="container">
+    <p class="section-label reveal">The Real Comparison</p>
+    <h2 class="compare-headline reveal stagger-1">Full Commission + <span class="gold">Restricted Access</span><br>vs. $17,000 + Maximum Exposure</h2>
+    <p class="compare-sub reveal stagger-2">Same property. Same market. Two completely different business models.</p>
+
+    <div class="compare-home-price reveal stagger-3">
+      <div class="price-context">Based on an SCV Home Priced At</div>
+      <div class="animated-price"><span class="dollar">$</span><span id="priceCounter">0</span></div>
+    </div>
+
+    <div class="versus-wrapper">
+      <div class="versus-col them reveal-left">
+        <div class="v-label">The Private Exclusive Model</div>
+        <h3>Charge More.<br>Show to Fewer.</h3>
+        <ul class="v-list">
+          <li><span class="v-icon">✕</span> Listing hidden behind brokerage network first</li>
+          <li><span class="v-icon">✕</span> Days on market concealed — not eliminated</li>
+          <li><span class="v-icon">✕</span> Brokerage incentivized to double-end the deal</li>
+          <li><span class="v-icon">✕</span> Limited buyer competition during private window</li>
+          <li><span class="v-icon">✕</span> Agent may represent buyers in other transactions</li>
+          <li><span class="v-icon">✕</span> Commission percentage scales with home value</li>
+        </ul>
+        <div class="v-price-block">
+          <div class="price-label">Listing-Side Fee at 2.5%</div>
+          <div class="price-amount" id="themFee">$21,250</div>
+          <div class="price-note">+ restricted market exposure</div>
+        </div>
+      </div>
+
+      <div class="versus-center">
+        <div class="vs-badge">VS</div>
+      </div>
+
+      <div class="versus-col us reveal-right">
+        <div class="v-label">The SeventeenK Model</div>
+        <h3>Charge Less.<br>Show to Everyone.</h3>
+        <ul class="v-list">
+          <li><span class="v-icon">✓</span> Listed on MLS, Zillow, Redfin, Realtor.com — day one</li>
+          <li><span class="v-icon">✓</span> Custom property website with AI-powered lead capture</li>
+          <li><span class="v-icon">✓</span> Full social media marketing distribution</li>
+          <li><span class="v-icon">✓</span> Maximum buyer competition from first showing</li>
+          <li><span class="v-icon">✓</span> Sellers-only agent — no buyer representation conflicts</li>
+          <li><span class="v-icon">✓</span> Flat fee regardless of sale price</li>
+        </ul>
+        <div class="v-price-block">
+          <div class="price-label">Listing-Side Fee — Flat</div>
+          <div class="price-amount">$17,000</div>
+          <div class="price-note">+ maximum market exposure</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="savings-callout reveal-scale">
+      <div class="savings-label">You Keep</div>
+      <div class="savings-number" id="savingsCounter">$0</div>
+      <div class="savings-note">More in your pocket. Same home. Better marketing. No walled garden.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 4: MARKETING STACK
+     ══════════════════════════════════════════ -->
+<section class="stack-section" id="stack">
+  <div class="container">
+    <p class="section-label reveal">What You Actually Get</p>
+    <h2 class="stack-headline reveal stagger-1">The Marketing Stack That<br><span class="gold">Replaces the Network</span></h2>
+    <p class="stack-sub reveal stagger-2">
+      A private brokerage network is a substitute for real marketing. When your agent builds the marketing infrastructure, you do not need the network. You need the internet, the tools, and someone who knows how to use both.
+    </p>
+
+    <div class="stack-grid">
+      <div class="stack-card reveal stagger-1">
+        <div class="stack-icon">🌐</div>
+        <h4>Custom AI Property Websites</h4>
+        <p>Every listing gets its own dedicated property site — not a template page buried inside a brokerage platform. Custom domain. AI-powered lead capture. Built to rank, built to convert, built to put your property at the center of its own marketing campaign.</p>
+      </div>
+
+      <div class="stack-card reveal stagger-2">
+        <div class="stack-icon">🤖</div>
+        <h4>AI Voice &amp; Chat Response</h4>
+        <p>When a buyer inquires at 11pm on a Saturday, they get an immediate, intelligent response — not a voicemail. AI-powered voice and chat agents qualify leads, answer property questions, and schedule showings around the clock.</p>
+      </div>
+
+      <div class="stack-card reveal stagger-3">
+        <div class="stack-icon">📱</div>
+        <h4>Multi-Platform Distribution</h4>
+        <p>MLS syndication is the floor, not the ceiling. Your listing gets custom social content across Facebook, Instagram, YouTube, TikTok, LinkedIn, Pinterest, and X — all optimized for the platforms where Santa Clarita buyers are actually searching.</p>
+      </div>
+
+      <div class="stack-card reveal stagger-4">
+        <div class="stack-icon">📍</div>
+        <h4>27+ Years of SCV Market Intelligence</h4>
+        <p>Algorithms do not know which side of the street gets afternoon shade in Saugus. They do not know that the lot behind Placerita Canyon backs to a horse trail. 27 years of selling exclusively in this valley is not something a national brokerage replicates with a private network.</p>
+      </div>
+
+      <div class="stack-card reveal stagger-5">
+        <div class="stack-icon">🎯</div>
+        <h4>Search &amp; AI Engine Optimization</h4>
+        <p>Every piece of content built around your listing is optimized for Google, AI answer engines, voice search, and local discovery. When someone searches for homes in your neighborhood — your property appears. Not because of a network. Because the marketing was built right.</p>
+      </div>
+
+      <div class="stack-card reveal stagger-6">
+        <div class="stack-icon">🔐</div>
+        <h4>Seller-Side Only Representation</h4>
+        <p>This is not just a marketing difference. It is a structural one. I do not represent buyers. Every tool, every strategy, every conversation is oriented toward one goal: maximizing the seller's position. That clarity powers everything else.</p>
+      </div>
+    </div>
+
+    <div class="stack-closer reveal">
+      <p>The best marketing for your home is not a private network with a velvet rope.<br>It is <strong>maximum exposure built by someone whose only job is protecting your side.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 5: THE POSITION
+     ══════════════════════════════════════════ -->
+<section class="position-section" id="position">
+  <div class="position-glow"></div>
+  <div class="container">
+    <div class="position-block">
+      <p class="section-label reveal">The Position</p>
+      <h2 class="position-headline reveal stagger-1">100% Seller Side.<br><span class="gold">$17,000. Full Service.</span><br>Maximum Exposure.</h2>
+      <p class="position-body reveal stagger-2">
+        The exclusive listings debate will keep going. Brokerages will keep fighting over who controls the inventory. Portals will keep suing each other over who gets to display it. None of that changes what a seller actually needs: an agent who markets aggressively, negotiates from a position of undivided loyalty, and charges a fee that makes sense regardless of what the home is worth.
+      </p>
+
+      <div class="pillars-row">
+        <div class="pillar reveal stagger-3">
+          <span class="pillar-icon">🛡️</span>
+          <h4>Undivided Loyalty</h4>
+          <p>No buyer clients. No split incentives. No reason to keep your listing hidden inside a network to create a double-ended deal.</p>
+        </div>
+        <div class="pillar reveal stagger-4">
+          <span class="pillar-icon">💰</span>
+          <h4>One Fee. Any Price.</h4>
+          <p>$17,000 whether the home sells for $600K or $2M. The work is the same. Your commission should be too.</p>
+        </div>
+        <div class="pillar reveal stagger-5">
+          <span class="pillar-icon">📡</span>
+          <h4>Maximum Reach</h4>
+          <p>MLS. Every major portal. Custom property sites. Social media. AI-powered lead response. No walled gardens. No restricted access.</p>
+        </div>
+      </div>
+
+      <a href="https://seventeenk.com" class="cta-btn reveal stagger-6">See What $17,000 Gets You</a>
+      <a href="https://sellersonlyagent.com" class="cta-secondary reveal stagger-7">Learn about the Sellers Only Agent model →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 6: FAQ
+     ══════════════════════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <p class="section-label reveal">Exclusive Listings FAQ</p>
+    <h2 class="faq-headline reveal stagger-1">The Questions Sellers <span class="gold">Should Be Asking</span></h2>
+    <p class="faq-sub reveal stagger-2">Straight answers about private exclusives, coming soon listings, and what it all means for your home sale.</p>
+
+    <div class="faq-list">
+      <div class="faq-item reveal stagger-1">
+        <button class="faq-question">
+          What is a Compass Private Exclusive and should I be worried about it?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>A Compass Private Exclusive is a listing visible only to Compass agents and their buyers before it hits the open market. Compass recently partnered with Redfin to syndicate these listings more broadly, but the core structure remains: your home is shown to a limited audience first. As a seller, the concern is whether your agent is using a strategy like this to benefit you or to benefit the brokerage. If limiting your buyer pool increases the chance of a double-ended deal for the brokerage, that is not a seller-first strategy.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-2">
+        <button class="faq-question">
+          What is the NAR delayed marketing exemption?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>In March 2025, NAR introduced the "Multiple Listing Options for Sellers" policy alongside Clear Cooperation. This allows sellers to instruct their listing agent to delay public marketing through IDX and syndication while still filing with the MLS. The seller must sign a disclosure acknowledging they are waiving the benefits of immediate broad exposure. The key question is whether delaying exposure genuinely serves your interest or primarily benefits agents and brokerages who want a preview window.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-3">
+        <button class="faq-question">
+          Will my home miss out on buyers if I do not use a private listing network?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>No. The MLS remains the central hub feeding every major real estate portal — Zillow, Redfin, Realtor.com, and hundreds of others. A properly marketed MLS listing reaches more buyers than any single brokerage network. Private networks are additive at best. The real question is whether your agent supplements the MLS with custom property marketing, social distribution, AI-powered lead capture, and search engine optimization. That determines maximum exposure — not which internal brokerage list it sits on.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-4">
+        <button class="faq-question">
+          If Compass has 37,000 agents, is that not better exposure than one local agent?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Network size and buyer reach are two different things. The buyer for your Santa Clarita home is not being sourced by a Compass agent in New York. They are searching on Zillow, driving through neighborhoods, finding listings on social media, and responding to local marketing. A local agent with a real marketing infrastructure — custom property sites, AI lead response, social distribution across every platform — will generate more qualified local buyer activity than a national agent count ever will.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-5">
+        <button class="faq-question">
+          Does hiding days on market actually protect my home's value?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>If the pricing is right and the marketing is strong, days on market take care of themselves. Brokerages that pitch hidden DOM as a benefit are solving a problem that good agents do not create. The real risk is that your home was undermarketed from the start, sat too long because of limited exposure, and then had to go public at a weaker position. Maximum exposure from day one prevents the problem that hidden days on market tries to disguise.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-6">
+        <button class="faq-question">
+          How does the SeventeenK model handle pre-market preparation?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>If a seller genuinely needs time before going fully active — renovations in progress, a move-out timeline, a specific launch date — I file the listing appropriately and build marketing assets in advance so the public launch hits with full force. But I am not going to restrict your exposure to a private network and call it strategy. Pre-market preparation is about building the marketing arsenal. It is not about limiting who sees the listing.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-7">
+        <button class="faq-question">
+          Why should I pay less and get more exposure?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Because the economics have changed. The tools that used to require a massive brokerage infrastructure — custom websites, automated follow-up, multi-platform marketing, AI-powered lead response — are now accessible to agents who invest in technology rather than headcount. I built the marketing stack. I built the AI systems. I built the property sites. The $17,000 flat fee reflects the actual cost of doing the work — not a percentage of your home's value.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal stagger-8">
+        <button class="faq-question">
+          What if a buyer only works with Compass agents — will they miss my listing?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Any buyer's agent — Compass or otherwise — can see your listing on the MLS, write an offer, and represent their buyer in the transaction. Listing with a sellers-only agent does not exclude any buyer or any buyer's agent. Compass agents, Keller Williams agents, RE/MAX agents, independents — they all access the same MLS. No one is locked out.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>Connor T. MacIvor</strong> · The Seller's Agent · CA DRE #01238257 · SYNC Brokerage</p>
+    <p style="margin-top:4px;">25060 Avenue Stanford, Suite 150, Santa Clarita CA 91355 · <a href="tel:+16614001720">661-400-1720</a></p>
+    <p style="margin-top:12px;"><a href="https://honorelevate.com" target="_blank">Coded by Connor with Honor | AI Growth Architect</a></p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+     ═══════════════════════════════════════════ -->
+<script>
+// ── 17 Ambient Gold Dots ──
+(function() {
+  const container = document.getElementById('ambientDots');
+  for (let i = 0; i < 17; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'ambient-dot';
+    dot.style.top = Math.random() * 100 + '%';
+    dot.style.left = Math.random() * 100 + '%';
+    dot.style.animationDelay = (Math.random() * 6) + 's';
+    dot.style.animationDuration = (4 + Math.random() * 4) + 's';
+    container.appendChild(dot);
+  }
+})();
+
+// ── Floating Nav Show/Hide ──
+(function() {
+  const nav = document.getElementById('floatingNav');
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > 600) {
+      nav.classList.add('show');
+    } else {
+      nav.classList.remove('show');
+    }
+    lastScroll = y;
+  }, { passive: true });
+})();
+
+// ── Scroll Reveal Observer ──
+(function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+    observer.observe(el);
+  });
+})();
+
+// ── Animated Price Counter ──
+(function() {
+  const priceEl = document.getElementById('priceCounter');
+  const themFeeEl = document.getElementById('themFee');
+  const savingsEl = document.getElementById('savingsCounter');
+  let animated = false;
+
+  function animateCount(el, target, prefix, duration, formatter) {
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * target);
+      el.textContent = prefix + formatter(current);
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  const fmtNum = (n) => n.toLocaleString();
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !animated) {
+        animated = true;
+        animateCount(priceEl, 850000, '', 1800, fmtNum);
+        setTimeout(() => {
+          themFeeEl.textContent = '$21,250';
+        }, 2000);
+        setTimeout(() => {
+          animateCount(savingsEl, 4250, '$', 1200, fmtNum);
+        }, 2200);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(document.querySelector('.compare-home-price'));
+})();
+
+// ── FAQ Accordion ──
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// ── Smooth Scroll for Nav Links ──
+document.querySelectorAll('.floating-nav a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ── Parallax on Scroll (subtle) ──
+(function() {
+  const floaters = document.querySelectorAll('.float-element');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    floaters.forEach((el, i) => {
+      const speed = (i + 1) * 0.015;
+      el.style.transform = `translateY(${y * speed}px)`;
+    });
+  }, { passive: true });
+})();
+</script>
+
+</body>
+</html>
